@@ -7,6 +7,9 @@ import ContactLayout from "./Layout/ContactLayout";
 import Location from "./Components/Location";
 import ContactUs from "./Components/ContactUs";
 import Notfound from "./Components/Notfound";
+import AllProducts, { productsLoader } from "./Components/AllProducts";
+import SingleProduct, { singleProductLoader } from "./Components/SingleProduct";
+import Error from "./Components/Error";
 
 function App() {
   const router = createBrowserRouter([
@@ -21,6 +24,20 @@ function App() {
         {
           path: "products",
           element: <Products />,
+          children : [
+            {
+              index : true ,
+              element : <AllProducts/>,
+              loader : productsLoader,
+              errorElement : <Error/>
+            },
+            {
+              path : ":id" ,
+              element: < SingleProduct/>,
+              loader : singleProductLoader,
+              errorElement : <Error/>
+            }
+          ]
         },
         {
           path: "contact",
