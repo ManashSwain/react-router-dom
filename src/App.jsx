@@ -2,11 +2,11 @@ import About from "./Pages/About";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Rootlayout from "./Layout/Rootlayout";
 import Products from "./Pages/Products";
-import Contact from "./Pages/Contact";
 import Pricing from "./Pages/Pricing";
 import ContactLayout from "./Layout/ContactLayout";
 import Location from "./Components/Location";
 import ContactUs from "./Components/ContactUs";
+import Notfound from "./Components/Notfound";
 
 function App() {
   const router = createBrowserRouter([
@@ -43,6 +43,10 @@ function App() {
         },
       ],
     },
+    {
+      path : "*",
+      element : <Notfound/>
+    }
   ]);
 
   return (
