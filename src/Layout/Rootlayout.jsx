@@ -8,7 +8,7 @@ const Rootlayout = () => {
     <>
     <Navbar/>
     <Outlet/>
-    <div className="footer relative bottom-0  w-full ">
+    <div className="footer  w-full ">
     <Footer/>
     </div>
     

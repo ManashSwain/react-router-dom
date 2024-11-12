@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -13,10 +13,10 @@ const Navbar = () => {
       <span className="ml-3 text-xl">Tailblocks</span>
     </a>
     <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-      <Link to='/'><a className="mr-5 hover:text-gray-900">First Link</a></Link>
-      <Link to='/about'><a className="mr-5 hover:text-gray-900">First Link</a></Link>
-      <Link><a className="mr-5 hover:text-gray-900">First Link</a></Link>
-      <Link><a className="mr-5 hover:text-gray-900">First Link</a></Link>
+      <NavLink to='/'><span className="mr-5 hover:text-gray-900">Home</span></NavLink>
+      <NavLink to='about'><span className="mr-5 hover:text-gray-900">About</span></NavLink>
+      <NavLink to='products'><span className="mr-5 hover:text-gray-900">Products</span></NavLink>
+      <NavLink to='contact'><span className="mr-5 hover:text-gray-900">Contact</span></NavLink>
     
     </nav>
     <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
