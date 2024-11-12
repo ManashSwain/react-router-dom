@@ -4,6 +4,9 @@ import Rootlayout from "./Layout/Rootlayout";
 import Products from "./Pages/Products";
 import Contact from "./Pages/Contact";
 import Pricing from "./Pages/Pricing";
+import ContactLayout from "./Layout/ContactLayout";
+import Location from "./Components/Location";
+import ContactUs from "./Components/ContactUs";
 
 function App() {
   const router = createBrowserRouter([
@@ -21,7 +24,18 @@ function App() {
         },
         {
           path: "contact",
-          element: <Contact />,
+          element: <ContactLayout />,
+          children : [
+            {
+              path: "location",
+              element: <Location />,
+            },
+            {
+              path: "contactus",
+              element: <ContactUs />,
+            }
+            
+          ]
         },
         {
           path: "pricing",
