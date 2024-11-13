@@ -59,21 +59,7 @@ Project Configuration
     React Router DOM v6.4: We used React Router's new version to simplify routing and manage nested routes, useLoaderData, and useRouteError.
     Tailwind CSS: Tailwind is used for rapid styling. It's configured to provide utility-first styles in the app.
 
-Tailwind CSS Setup
 
-To set up Tailwind CSS in the project, follow these steps:
-
-    Install Tailwind via npm:
-
-npm install -D tailwindcss postcss autoprefixer
-
-Create the Tailwind configuration files:
-
-    npx tailwindcss init -p
-
-    Configure Tailwind in tailwind.config.js and postcss.config.js.
-
-    Import Tailwind CSS styles in your main index.css or tailwind.css file.
 
 Contributing
 
